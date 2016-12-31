@@ -174,7 +174,7 @@ function formatCountry(job) {
 function formatPaymentVerified(job) {
   return job.client
     && job.client.payment_verification_status
-    && `<b>Payment verification status</b>: ${job.client.payment_verification_status}`;
+    && `<b>Payment verification status</b>: #${job.client.payment_verification_status}`;
 }
 
 function formatUrl(job) {
@@ -182,7 +182,7 @@ function formatUrl(job) {
 }
 
 function formatJobType(job) {
-  return job.job_type && `<b>Job type</b>: ${job.job_type}`;
+  return job.job_type && `<b>Job type</b>: #${job.job_type}`;
 }
 
 function formatBudget(job) {
