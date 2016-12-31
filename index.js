@@ -129,6 +129,11 @@ function formatMessage(job) {
     formatCategory(job),
     formatSkills(job),
     formatCountry(job),
+    formatPaymentVerified(job),
+    formatJobType(job),
+    formatBudget(job),
+    formatDuration(job),
+    formatWorkload(job),
     formatUrl(job)
   ]
   .filter(Boolean)
@@ -166,6 +171,28 @@ function formatCountry(job) {
     && `<b>Country</b>: #${job.client.country.replace(/[\.\-\s]+/, '_')}`;
 }
 
+function formatPaymentVerified(job) {
+  return job.client
+    && job.client.payment_verification_status
+    && `<b>Payment verification status: ${job.client.payment_verification_status}`;
+}
+
 function formatUrl(job) {
   return `<a href="${job.url}">click to apply</a>`
+}
+
+function formatJobType(job) {
+  return job.job_type && `Job type: ${job.job_type}`;
+}
+
+function formatBudget(job) {
+  return job.budget && `Budget: ${job.budget} $`;
+}
+
+function formatDuration(job) {
+  return job.duration && `Duration: ${job.duration}`;
+}
+
+function formatWorkload(job) {
+  return job.workload && `Workload: ${job.workload}`;
 }
