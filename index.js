@@ -162,13 +162,13 @@ function formatSkills(job) {
 }
 
 function formatSkill(skill) {
-  return `#${skill.replace(/[\.\-\s]+/, '_')}`;
+  return `#${skill.replace(/[\.\-\s]+/g, '_')}`;
 }
 
 function formatCountry(job) {
   return job.client
     && job.client.country
-    && `<b>Country</b>: #${job.client.country.replace(/[\.\-\s]+/, '_')}`;
+    && `<b>Country</b>: #${job.client.country.replace(/[\.\-\s]+/g, '_')}`;
 }
 
 function formatPaymentVerified(job) {
