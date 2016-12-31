@@ -1,0 +1,22 @@
+{
+  "name": "upwork-jobs-api-notifier",
+  "version": "1.0.0",
+  "description": "New Upwork Jobs Notifications",
+  "repository": "https://git.heroku.com/mighty-chamber-18259.git",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^4.7.5",
+    "node-schedule": "^1.2.0",
+    "node-telegram-bot-api": "^0.25.0",
+    "upwork-api": "^1.2.1"
+  },
+  "devDependencies": {
+    "debug": "^2.6.0"
+  }
+}
