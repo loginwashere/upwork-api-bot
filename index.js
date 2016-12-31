@@ -174,7 +174,7 @@ function formatCountry(job) {
 function formatPaymentVerified(job) {
   return job.client
     && job.client.payment_verification_status
-    && `<b>Payment verification status: ${job.client.payment_verification_status}`;
+    && `<b>Payment verification status</b>: ${job.client.payment_verification_status}`;
 }
 
 function formatUrl(job) {
@@ -182,17 +182,17 @@ function formatUrl(job) {
 }
 
 function formatJobType(job) {
-  return job.job_type && `Job type: ${job.job_type}`;
+  return job.job_type && `<b>Job type</b>: ${job.job_type}`;
 }
 
 function formatBudget(job) {
-  return job.budget && `Budget: ${job.budget} $`;
+  return job.budget && `<b>Budget</b>: ${job.budget} $`;
 }
 
 function formatDuration(job) {
-  return job.duration && `Duration: ${job.duration}`;
+  return job.duration && `<b>Duration</b>: ${job.duration}`;
 }
 
 function formatWorkload(job) {
-  return job.workload && `Workload: ${job.workload}`;
+  return job.workload && `<b>Workload</b>: ${job.workload}`;
 }
