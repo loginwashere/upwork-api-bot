@@ -22,7 +22,10 @@ const bot = new TelegramBot(process.env.TELEGRAM_TOKEN);
 const db = mongoose.connection;
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.DB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const jobSchema = mongoose.Schema({
   id: String,
